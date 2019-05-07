@@ -1,0 +1,55 @@
+html{
+    font-size:20px;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:black;
+    color:white;
+}
+
+.text{
+    text-align: center;
+    width:100%;
+    margin-top:1rem;
+    margin-bottom:1.5rem;
+    font-size:2rem;
+}
+
+.hangman{
+    text-align: center;
+    width:60%;
+    margin:0 auto;
+    background-size: cover;
+}
+.images{
+    width:100%;
+}
+
+.checktext{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    margin-bottom:0.1rem;
+    justify-content:center;
+}
+
+.letter{
+    width:2rem;
+    height:2rem;
+    padding:1rem;
+    border:0.2rem solid white;
+    margin-right:0.5rem;
+    margin-bottom:0.5rem;
+    text-align: center;
+    font-size:2rem;
+    cursor: pointer;
+    border-radius:1.2rem;
+}
+.letter:hover{
+    background-color:#cccccc;
+    border-color:rgb(50, 47, 53);
+    color:rgb(50, 47, 53);
+}

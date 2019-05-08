@@ -4,7 +4,7 @@ export class Text extends React.Component
 {
     render(){
         return(
-            <div className='text' >x</div>
+            <div className='text' >{this.props.text}</div>
         )
     }
 }

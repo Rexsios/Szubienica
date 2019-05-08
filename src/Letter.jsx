@@ -5,7 +5,8 @@ export class Letter extends React.Component
     render(){
         let letter = String.fromCharCode(this.props.value);
         return(
-            <div className='letter' key={this.props.value}>{letter}</div>
+            <div className='letter'
+            onClick={this.props.onClick} name={this.props.value}>{letter}</div>
         )
     }
 }

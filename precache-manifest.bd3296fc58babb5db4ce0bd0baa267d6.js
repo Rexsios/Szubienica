@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65eb4fa2d5c5bf1bea32dfb63b21dff8",
+    "revision": "4a75af8f99d0c426c18dc0ff0f7a7bbc",
     "url": "/Szubienica/index.html"
   },
   {

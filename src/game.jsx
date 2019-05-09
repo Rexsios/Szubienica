@@ -11,9 +11,10 @@ export class Game extends React.Component {
         super(props);
         this.state = {
             mistake: 0,
-            text: 'Wale konia',
-            hash: '---- -----',
-            win: false
+            text: null,
+            hash: null,
+            win: false,
+            tab:null
         }
     }
 
@@ -24,11 +25,11 @@ export class Game extends React.Component {
         )
         let random = Math.floor(Math.random() * (tab.length));
         let hash = this.hashname(tab[random]);
-        this.setState({ text: tab[random] ,hash:hash})
+        this.setState({ text: tab[random] ,hash:hash,tab:tab})
     }
 
     hashname(text) {
-        let hash= ' ';
+        let hash= '';
         for(let i=0;i<text.length;i++){
             if(text[i]===' '){ hash=hash +' ';}
             else hash=hash + "-";
@@ -99,11 +100,14 @@ export class Game extends React.Component {
     }
 
     handleButton = () => {
+        let number= Math.floor(Math.random() * (this.state.tab.length))
+        let hash= this.hashname(this.state.tab[number]);
         this.setState({
             mistake: 0,
-            text: 'Ala ma kota',
-            hash: '--- -- ----',
-            win: false
+            hash: hash,
+            text: this.state.tab[number],
+            win: false,
+
         })
     }
 

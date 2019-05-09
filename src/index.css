@@ -15,7 +15,14 @@ body{
     margin-bottom:1.5rem;
     font-size:2rem;
 }
-
+.textlose{
+    text-align: center;
+    width:100%;
+    margin-top:1rem;
+    margin-bottom:1.5rem;
+    font-size:2rem;
+    color:green;
+}
 .hangman{
     text-align: center;
     width:60%;
@@ -38,14 +45,14 @@ body{
 }
 
 .letter{
-    width:2rem;
-    height:2rem;
+    width:1.5rem;
+    height:1.5rem;
     padding:1rem;
     border:0.2rem solid white;
     margin-right:0.5rem;
     margin-bottom:0.5rem;
     text-align: center;
-    font-size:2rem;
+    font-size:1.5rem;
     cursor: pointer;
     border-radius:1.2rem;
 }
@@ -58,6 +65,36 @@ body{
 .normal{
     background-color: green;
 }
+.endpart{
+    text-align: center;
+}
+
+.endpartwin{
+    color:green;
+    font-size:2rem;
+}
+
+.endpartlose{ 
+    color:red;
+    font-size:2rem;
+}
+.btnend{
+    margin-top:2rem;
+    background-color:black;
+    width:60%;
+    border:none;
+    border:0.1rem solid white;
+    color:white;
+    font-size:2rem;
+    border-radius:2rem;
+    margin-bottom:3rem;
+}
+.btnend:hover{
+    cursor:pointer;
+    background-color:#cccccc;
+    border-color:rgb(50, 47, 53);
+    color:rgb(50, 47, 53);
+}
 
 @media only screen and (max-width: 600px) {
     html{
@@ -69,5 +106,8 @@ body{
     }
     .images{
         width:100%;
+    }
+    .btnend{
+        margin-bottom:5rem;
     }
   }

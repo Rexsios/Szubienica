@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Szubienica/precache-manifest.f754c827597fbbe08cdd2cea60aee79c.js"
+  "/Szubienica/precache-manifest.9800627ac76819a0062b3e7fd3017405.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Szubienica/static/css/main.345b9b54.chunk.css",
-    "main.js": "/Szubienica/static/js/main.b1bcfef4.chunk.js",
-    "main.js.map": "/Szubienica/static/js/main.b1bcfef4.chunk.js.map",
+    "main.js": "/Szubienica/static/js/main.1b9aea7b.chunk.js",
+    "main.js.map": "/Szubienica/static/js/main.1b9aea7b.chunk.js.map",
     "runtime~main.js": "/Szubienica/static/js/runtime~main.b76bbbd1.js",
     "runtime~main.js.map": "/Szubienica/static/js/runtime~main.b76bbbd1.js.map",
     "static/js/2.179f4c70.chunk.js": "/Szubienica/static/js/2.179f4c70.chunk.js",
     "static/js/2.179f4c70.chunk.js.map": "/Szubienica/static/js/2.179f4c70.chunk.js.map",
     "index.html": "/Szubienica/index.html",
-    "precache-manifest.f754c827597fbbe08cdd2cea60aee79c.js": "/Szubienica/precache-manifest.f754c827597fbbe08cdd2cea60aee79c.js",
+    "precache-manifest.9800627ac76819a0062b3e7fd3017405.js": "/Szubienica/precache-manifest.9800627ac76819a0062b3e7fd3017405.js",
     "service-worker.js": "/Szubienica/service-worker.js",
     "static/css/main.345b9b54.chunk.css.map": "/Szubienica/static/css/main.345b9b54.chunk.css.map"
   }

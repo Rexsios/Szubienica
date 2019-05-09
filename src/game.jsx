@@ -14,7 +14,9 @@ export class Game extends React.Component {
             text: null,
             hash: null,
             win: false,
-            tab:null
+            tab: null,
+            lettersgood: Array(36).fill(null),
+            lettersbad: Array(36).fill(null)
         }
     }
 
@@ -25,14 +27,18 @@ export class Game extends React.Component {
         )
         let random = Math.floor(Math.random() * (tab.length));
         let hash = this.hashname(tab[random]);
-        this.setState({ text: tab[random] ,hash:hash,tab:tab})
+        this.setState({ text: tab[random], hash: hash, tab: tab })
+
+        for(let i=0;i<10;i++){
+            
+        }
     }
 
     hashname(text) {
-        let hash= '';
-        for(let i=0;i<text.length;i++){
-            if(text[i]===' '){ hash=hash +' ';}
-            else hash=hash + "-";
+        let hash = '';
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === ' ') { hash = hash + ' '; }
+            else hash = hash + "-";
         }
         return hash;
     }
@@ -40,7 +46,7 @@ export class Game extends React.Component {
     renderStatus() {
         if (this.state.mistake !== 9)
             return (
-                <Text classinfo={'text'} text={this.state.hash} />
+                <Text classinfo={'textstatus'} text={this.state.hash} />
             )
         return (
             <>
@@ -53,13 +59,17 @@ export class Game extends React.Component {
     renderLetters() {
         if (this.state.mistake >= 9 || this.state.win === true) return null;
         let a = [];
-        for (let i = 65; i < 90; i++) {
-            let x = <Letter key={i} value={i} onClick={() => this.handleLetter(i)} />;
+        let x = null;
+        let className=null;
+        for (let i = 65; i < 91; i++) {
+            if(this.state.lettersgood.includes(i)) className='lettergreen'
+            else if(this.state.lettersbad.includes(i)) className='letterred'
+            else className='letter'
+                x = <Letter key={i} className={className} value={i} onClick={() => this.handleLetter(i)} />;
             a.push(x);
         }
 
         return (
-
             <div className='checktext'>
                 {a}
             </div>
@@ -67,22 +77,28 @@ export class Game extends React.Component {
     }
 
     handleLetter = (i) => {
-        const text = this.state.text.toLowerCase();
-        let hash = this.state.hash;
-        let letter = String.fromCharCode(i).toLowerCase();
-        if (text.includes(letter)) {
-            for (let i = 0; i < text.length; i++) {
-                if (i === 1) letter = letter.toLowerCase();
-                if (text[i] === letter) {
-                    if (i === 0) letter = letter.toUpperCase();
-                    hash = hash.substr(0, i) + letter + hash.substr(i + 1);
+        let lettersgood = this.state.lettersgood;
+        let lettersbad = this.state.lettersbad;
+        if (!lettersgood.includes(i) && !lettersbad.includes(i)) {
+            const text = this.state.text.toLowerCase();
+            let hash = this.state.hash;
+            let letter = String.fromCharCode(i).toLowerCase();
+            if (text.includes(letter)) {
+                for (let i = 0; i < text.length; i++) {
+                    if (i === 1) letter = letter.toLowerCase();
+                    if (text[i] === letter) {
+                        if (i === 0) letter = letter.toUpperCase();
+                        hash = hash.substr(0, i) + letter + hash.substr(i + 1);
+                    }
                 }
+                let win = false;
+                if (hash === this.state.text) { win = true; }
+                lettersgood.push(i);
+                this.setState({ hash: hash, win: win, lettersgood: lettersgood })
+            } else {
+                lettersbad.push(i);
+                this.setState({ mistake: this.state.mistake + 1, lettersbad: lettersbad })
             }
-            let win = false;
-            if (hash === this.state.text) { win = true; }
-            this.setState({ hash: hash, win: win })
-        } else {
-            this.setState({ mistake: this.state.mistake + 1 })
         }
     }
 
@@ -98,21 +114,22 @@ export class Game extends React.Component {
             <EndPart win={info} classinfo={classinfo} onClick={() => this.handleButton()} />
         )
     }
-
+    //reset!!!
     handleButton = () => {
-        let number= Math.floor(Math.random() * (this.state.tab.length))
-        let hash= this.hashname(this.state.tab[number]);
+        let number = Math.floor(Math.random() * (this.state.tab.length))
+        let hash = this.hashname(this.state.tab[number]);
         this.setState({
             mistake: 0,
             hash: hash,
             text: this.state.tab[number],
             win: false,
-
+            lettersgood: Array(35).fill(null),
+            lettersbad: Array(35).fill(null)
         })
     }
 
     renderHMan() {
-        let imgs = '/images/s' + this.state.mistake + '.jpg';
+        let imgs = './images/s' + this.state.mistake + '.jpg';
         return (
             <Hangman img={imgs} />
         )

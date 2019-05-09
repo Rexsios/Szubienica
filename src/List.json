@@ -6,5 +6,51 @@
     {
         "id": 1,
         "text":"Koniec"
+    },
+    {
+        "id": 2,
+        "text":"Automatyka i robotyka"
+    },
+    {
+        "id": 3,
+        "text":"Akademik"
+    },
+    {
+        "id": 4,
+        "text":"Koteczek"
+    },
+    {
+        "id": 5,
+        "text":"Karolajn"
+    },
+    {
+        "id": 6,
+        "text":"League of legends"
+    },
+    {
+        "id": 7,
+        "text":"Betoniarka"
+    },
+    {
+        "id": 8,
+        "text":"Madka polka"
+    },
+    {
+        "id": 9,
+        "text":"Andrzej to jebnie"
+    },
+    {
+        "id": 10,
+        "text":"Urwiesz mi kabel od internetu"
+    },
+    {
+        "id": 11,
+        "text":"Chytry to pipka"
+    },
+    {
+        "id": 12,
+        "text":"Pozdro"
     }
+
+
 ]

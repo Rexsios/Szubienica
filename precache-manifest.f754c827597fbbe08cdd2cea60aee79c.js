@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4925e675f2f3446e22330c4c67eddae5",
+    "revision": "de1e7765a8429c863e5d7bd1343e7c59",
     "url": "/Szubienica/index.html"
   },
   {
-    "revision": "f37d20a8dda41708e3a1",
-    "url": "/Szubienica/static/css/main.f9e06781.chunk.css"
+    "revision": "10a9d9859f55df467c7e",
+    "url": "/Szubienica/static/css/main.345b9b54.chunk.css"
   },
   {
     "revision": "43d1f55c2a696b4563b8",
     "url": "/Szubienica/static/js/2.179f4c70.chunk.js"
   },
   {
-    "revision": "f37d20a8dda41708e3a1",
-    "url": "/Szubienica/static/js/main.90125727.chunk.js"
+    "revision": "10a9d9859f55df467c7e",
+    "url": "/Szubienica/static/js/main.b1bcfef4.chunk.js"
   },
   {
     "revision": "d76da9e88811fbbfdbe2",

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Szubienica/static/css/main.889d428b.chunk.css",
+    "main.js": "/Szubienica/static/js/main.2e21bd55.chunk.js",
+    "main.js.map": "/Szubienica/static/js/main.2e21bd55.chunk.js.map",
+    "runtime~main.js": "/Szubienica/static/js/runtime~main.b76bbbd1.js",
+    "runtime~main.js.map": "/Szubienica/static/js/runtime~main.b76bbbd1.js.map",
+    "static/js/2.179f4c70.chunk.js": "/Szubienica/static/js/2.179f4c70.chunk.js",
+    "static/js/2.179f4c70.chunk.js.map": "/Szubienica/static/js/2.179f4c70.chunk.js.map",
+    "index.html": "/Szubienica/index.html",
+    "precache-manifest.325d6992a9df6bddbec9e2a34b56101d.js": "/Szubienica/precache-manifest.325d6992a9df6bddbec9e2a34b56101d.js",
+    "service-worker.js": "/Szubienica/service-worker.js",
+    "static/css/main.889d428b.chunk.css.map": "/Szubienica/static/css/main.889d428b.chunk.css.map"
+  }
+}
